@@ -1,4 +1,5 @@
 from rule.Rule1092 import Rule1092
+from rule.Rule1094 import Rule1094
 
 
 class RuleReport():
@@ -6,13 +7,13 @@ class RuleReport():
         self.url = website_url
 
     def test(self):
-        rule1092 = Rule1092(self.url)
-        rule1092.task()
+        rule1094 = Rule1094(self.url)
+        rule1094.task()
 
 
 if __name__ == "__main__":
     #
-    url = "http://example.com/"
+    url = "file:///C:/Users/nima/Desktop/sample1.htm"
 
     test = RuleReport(website_url=url)
     test.test()
