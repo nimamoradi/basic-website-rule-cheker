@@ -13,7 +13,7 @@ class Rule(metaclass=ABCMeta):
         self.url = web_url
         self.driver = webdriver.Chrome()
         self.driver.get(self.url)
-        Alert(self.driver).dismiss()
+        # Alert(self.driver).dismiss()
 
     def __del__(self):
         self.driver.close()
