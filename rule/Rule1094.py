@@ -10,6 +10,6 @@ class Rule1094(Rule):
         for meta in metas:
             http = meta.get_attribute("http-equiv")
             if http is not None:
-                assert not http == "refresh", 'site should refresh using meta'
+                assert not http == "refresh", 'site should not refresh using meta'
 
         print('test passed 1094')
