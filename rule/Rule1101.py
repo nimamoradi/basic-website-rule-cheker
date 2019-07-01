@@ -3,7 +3,7 @@ from rule.Rule import Rule
 
 class Rule1101(Rule):
 
-    def task(self):
+    def runTest(self):
         # hashmap contains links
         links_dict = {}
 

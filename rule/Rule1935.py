@@ -3,7 +3,7 @@ from rule.Rule import Rule
 
 class Rule1935(Rule):
 
-    def task(self):
+    def runTest(self):
         # The goal of this rule is to ban the usage of HTML "style" property to make sure that all CSS styles are
         # defined in CSS classes. Consolidating all styling into classes makes it easier to read, understand and
         # maintain.

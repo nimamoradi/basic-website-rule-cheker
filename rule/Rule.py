@@ -1,3 +1,5 @@
+import unittest
+
 from selenium import webdriver
 from abc import ABCMeta, abstractmethod
 
@@ -5,12 +7,13 @@ from selenium.webdriver import DesiredCapabilities
 from selenium.webdriver.common.alert import Alert
 
 
-class Rule(metaclass=ABCMeta):
+class Rule(unittest.TestCase,metaclass=ABCMeta):
 
-    def __init__(self, web_url):
+    def __init__(self):
+        super().__init__()
         dc = DesiredCapabilities()
 
-        self.url = web_url
+        self.url = "file:///C:/Users/nima/Desktop/sample1.htm"
         self.driver = webdriver.Chrome()
         self.driver.get(self.url)
         # Alert(self.driver).dismiss()
@@ -19,5 +22,5 @@ class Rule(metaclass=ABCMeta):
         self.driver.close()
 
     @abstractmethod
-    def task(self):
+    def runTest(self):
         raise NotImplementedError("Please Implement this method")

@@ -6,7 +6,7 @@ class CustomRule(Rule):
         super().__init__(web_url)
         self.driver.set_window_size(x, y)
 
-    def task(self):
+    def runTest(self):
         # which extension we consider as image
 
         input1 = self.driver.find_element_by_xpath('/html/body/div/form/span[1]')
