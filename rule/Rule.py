@@ -7,13 +7,13 @@ from selenium.webdriver import DesiredCapabilities
 from selenium.webdriver.common.alert import Alert
 
 
-class Rule(unittest.TestCase,metaclass=ABCMeta):
+class Rule(unittest.TestCase, metaclass=ABCMeta):
 
-    def __init__(self):
+    def __init__(self, web_url):
         super().__init__()
         dc = DesiredCapabilities()
 
-        self.url = "file:///C:/Users/nima/Desktop/sample1.htm"
+        self.url = web_url
         self.driver = webdriver.Chrome()
         self.driver.get(self.url)
         # Alert(self.driver).dismiss()

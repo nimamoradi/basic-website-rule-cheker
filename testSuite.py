@@ -9,5 +9,12 @@ from rule.Rule1935 import Rule1935
 
 if __name__ == '__main__':
     suite = unittest.TestSuite()
-    suite.addTests([Rule1092(), Rule1094(), Rule1101(), Rule1827(), Rule1935(), ])
+    url = "http://www.example.com/"
+    suite.addTests([Rule1092(url), Rule1094(url), Rule1101(url), Rule1827(url), Rule1935(url)])
     unittest.TextTestRunner().run(suite)
+
+    res_list = [(800, 600), (1024, 768), (1448, 1072), (2048, 1536)]
+    for x_size, y_size in res_list:
+        print('running test for res x = ', x_size, ' y = ', y_size)
+        rule1935 = CustomRule(url, x=x_size, y=y_size)
+        rule1935.runTest()
