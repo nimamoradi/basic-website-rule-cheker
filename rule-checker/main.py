@@ -1,3 +1,5 @@
+import unittest
+
 from rule.CustomRule import CustomRule
 from rule.Rule1092 import Rule1092
 from rule.Rule1094 import Rule1094
@@ -15,11 +17,11 @@ class RuleReport():
         rule1935.task()
 
         #     rule1935.task()
-        # res_list = [(800, 600), (1024, 768), (1448, 1072), (2048, 1536)]
-        # for x_size, y_size in res_list:
-        #     print('running test for res x = ', x_size, ' y = ', y_size)
-        #     rule1935 = CustomRule(self.url, x=x_size, y=y_size)
-        #     rule1935.task()
+        res_list = [(800, 600), (1024, 768), (1448, 1072), (2048, 1536)]
+        for x_size, y_size in res_list:
+            print('running test for res x = ', x_size, ' y = ', y_size)
+            rule1935 = CustomRule(self.url, x=x_size, y=y_size)
+            rule1935.task()
 
 
 if __name__ == "__main__":

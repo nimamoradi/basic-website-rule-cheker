@@ -4,7 +4,6 @@ from selenium import webdriver
 from abc import ABCMeta, abstractmethod
 
 from selenium.webdriver import DesiredCapabilities
-from selenium.webdriver.common.alert import Alert
 
 
 class Rule(unittest.TestCase, metaclass=ABCMeta):
