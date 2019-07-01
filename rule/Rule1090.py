@@ -8,7 +8,7 @@ class Rule1090(Rule):
         # can easily scan the contents of all frames at once. However, visually impaired users using screen readers
         # hear the page content linearly.
         frames = self.driver.find_elements_by_xpath('//frame')
-        self.assertEqual(len(frames),3)
+
         print('size ', len(frames))
         for frame in frames:
             title = frame.get_attribute("title")
