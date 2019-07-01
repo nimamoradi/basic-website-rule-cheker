@@ -1,9 +1,11 @@
+from selenium import webdriver
+
 from rule.Rule import Rule
 
 
 class CustomRule(Rule):
-    def __init__(self, web_url, x, y):
-        super().__init__(web_url)
+    def __init__(self, web_url, x, y, web_driver=webdriver.Chrome()):
+        super().__init__(web_url, web_driver=web_driver)
         self.driver.set_window_size(x, y)
 
     def runTest(self):

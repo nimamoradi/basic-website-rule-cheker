@@ -8,12 +8,12 @@ from selenium.webdriver import DesiredCapabilities
 
 class Rule(unittest.TestCase, metaclass=ABCMeta):
 
-    def __init__(self, web_url):
+    def __init__(self, web_url, web_driver=webdriver.Chrome()):
         super().__init__()
         dc = DesiredCapabilities()
 
         self.url = web_url
-        self.driver = webdriver.Chrome()
+        self.driver = web_driver
         self.driver.get(self.url)
         # Alert(self.driver).dismiss()
 
